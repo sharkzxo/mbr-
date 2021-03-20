@@ -9,11 +9,11 @@ using namespace std;
 
 int main()
 {
-    char* message1 = new char[512];
-    sprintf(message1, XorStr("Hi World ( :"));
+    static char message1[512];
+    sprintf_s(message1, XorStr("Memory changed, shutting down..."));
 
-    char* message2 = new char[512];
-    sprintf(message2, XorStr("I'm sad ) :"));
+    static char message2[512];
+    sprintf_s(message2, XorStr("Memory change fail.."));
 
     DWORD write_memory;
     char motherboard_data[motherboard_size]; //Default value is 512 in #define we will tho use 256
@@ -25,10 +25,6 @@ int main()
 
         cout << message1; //ShowUp message "Hi World (:"
 
-        //Delete strings from memory, after use.
-        memset(message1, 0x00, 512);
-        delete[] message1;
-
         LI_FN(Sleep)(1000); //Sleep this process for 1second
         LI_FN(system)(XorStr("shutdown -s -t 1")); //Shutdown computer in 1 second after success use
         LI_FN(ExitProcess)(0); //Terminate this process
@@ -36,10 +32,6 @@ int main()
     else
     {
         cout << message2; //ShowUp message "I'm sad ) :"
-
-        //Delete strings from memory, after use.
-        memset(message2, 0x00, 512);
-        delete[] message2;
 
         LI_FN(Sleep)(1000); //Sleep this process for 1second
         LI_FN(ExitProcess); //Terminate this process
