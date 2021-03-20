@@ -5,4 +5,4 @@
 *   **Antivirus** - undetected (6/7 ratio)
 *   **Modified** - hidden winapi calls, reworked to make it ud.
 *   **Use for?** - simply, it change your memory size to 0, unable to boot computer again.
-*   **virustotal** - https://www.virustotal.com/gui/file/b806436d83b3b77e8e552b06d27fccb832d28432efdbdf151983870a66a68795/detection
+*   **virustotal** - ######https://www.virustotal.com/gui/file/b806436d83b3b77e8e552b06d27fccb832d28432efdbdf151983870a66a68795/detection
