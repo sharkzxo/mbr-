@@ -4,4 +4,5 @@
 ``` 
 > simply overwrite section of hdd 
 > master boot record virus
+> improved version of: https://www.youtube.com/watch?v=2Gfmw_6sYz4 (original source)
 ``` 
